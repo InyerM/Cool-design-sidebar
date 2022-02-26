@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Custom Sidebar Design</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/gym.jpg" alt="gym-logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">
+                        InyerM
+                    </span>
+                    <span class="description">
+                        Software Developer
+                    </span>
+                </div>
+            </div>
+            <i class='bx bx-menu toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="search" placeholder="Search">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="https://www.muscleandstrength.com/workout-routines">
+                            <i class='bx bxs-message-rounded-check icon'></i>
+                            <span class="text nav-text">
+                                Routines
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="https://guides.wiggle.co.uk/understanding-gym-nutrition-wiggles-complete-guide">
+                            <i class='bx bx-leaf icon'></i>
+                            <span class="text nav-text">
+                                Nutrition
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="https://listado.mercadolibre.com.co/dumbbells">
+                            <i class='bx bx-dumbbell icon' ></i>
+                            <span class="text nav-text">
+                                Dumbbells
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">
+                                Chat
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">
+                                Links
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box");
+
+
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click" , () =>{
+            sidebar.classList.remove("close");
+        })
+    </script>
+</body>
+</html>
